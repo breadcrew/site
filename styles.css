@@ -100,14 +100,15 @@ main {
 
 .hero {
   position: relative;
-  height: 100vh;
+  min-height: 70svh;
+  height: clamp(60svh, 72vw, 100svh);
   background-image: 
     linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.15)),
     url('./header.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 .hero::before {
@@ -255,10 +256,9 @@ main {
   }
 
   .hero {
+    min-height: 50svh;
     height: auto;
-    min-height: 60vh;
-    background-attachment: scroll;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
